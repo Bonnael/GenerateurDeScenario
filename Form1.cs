@@ -83,5 +83,23 @@ namespace GenerateurDeScenario
             rtbScenario.Text = scenario;
 
         }
+
+        private void btnCopier_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(rtbScenario.Text))
+            {
+                Clipboard.SetText(rtbScenario.Text);
+                MessageBox.Show("Scénario copié dans le presse-papiers !", "Copié", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Aucun scénario à copier.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
